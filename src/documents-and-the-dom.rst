@@ -83,11 +83,16 @@ Then in the :title:`DOM` you will see a duplication:
 
    </pre>
 
-Note, this is by design!
+Note, this is by design, because :title:`StreamDocs` does not assume how you might want to manipulate your :title:`DOM` it just inserts `iFrame` constructs which contains your :title:`PDF`.
 
-:title:`StreamDocs` does not assume how you might want to manipulate your :title:`DOM` it just inserts `iFrame` constructs which contains your :title:`PDF`.
 
-It is very likely that you may want to use the same `div` for different documents, in this case you should empty the target `div` of its children before continuing.
+How to solve document view duplication?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is very likely that you may want to use the same `div` for different documents, but you don't want the `div` to expand with more and more `iFrames`. So how do you solve this? Fortunately this is simple.
+
+
+All that is required is to empty the target `div` of its children before continuing.
 
 For example:
 
